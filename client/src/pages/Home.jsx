@@ -5,7 +5,15 @@ import Carbcal from "../components/Carbcal";
 function Home() {
   return (
     <>
-      <div className="Home">hello</div>
+      <div className="Home">
+        <div className="hero">
+          <Hero />
+        </div>
+
+        <div className="carbcal">
+          <Carbcal />
+        </div>
+      </div>
     </>
   );
 }

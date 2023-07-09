@@ -54,26 +54,6 @@ const Cars = () => {
   return (
     <>
       <div className="section">
-        {/* <h3>Weight:</h3>
-        <input
-          type="number"
-          value={weightInput}
-          onChange={handleWeightChange}
-        />
-
-        <h3>Distance:</h3>
-        <input
-          type="number"
-          value={distanceInput}
-          onChange={handleDistanceChange}
-        />
-
-        <div>
-          <button onClick={handleCalculateClick}>Calculate</button>
-
-          <h2>CO2 Emission:</h2>
-          {lala && <p>{lala.co2e}</p>}
-        </div> */}
 
         <div className="calculator-bg2">
           <div className="p-6">
@@ -106,7 +86,7 @@ const Cars = () => {
         <div className="div mt-10">
           <div className="output-field ">
             <h2 className={`${styles.texts1} p-6`}>
-              Your Carbon offset is
+              Your Carbon offset is :
               {lala && <p>{lala.co2e}</p>}
             </h2>
           </div>

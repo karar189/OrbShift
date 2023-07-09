@@ -73,7 +73,7 @@ const Electricity = () => {
         
         <div className="output-field ">
         <h2 className={`${styles.texts1} p-6`}>
-        Your Carbon offset is
+        Your Carbon offset is :
         {showOutput && <>{lala && <p>{lala.co2e}</p>}</>}
         </h2>
         </div>
