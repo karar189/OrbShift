@@ -10,13 +10,13 @@ const Hero = () => {
         <Nav />
 
         <div className="hero-sec">
-          <div className="flex justify-center mt-36">
-            <img src={earth} alt="" className="w-2/3 absolute" />
+          <div className="flex justify-center mt-32">
+            <img src={earth} alt="" className="w-2/3 -z-10 absolute" />
           </div>
 
-          <div className="hero-txt flex justify-center text-7xl text-center Z-30 relative ">
-            The coolest way to cool <br />
-            the planet
+          <div className="hero-txt flex justify-center text-8xl font-thin text-center Z-30 relative nanum pt-16">
+            The coolest way to cool 
+            the <br /> planet
             {/* <img src={earthmoji} alt="" className="" /> */}
           </div>
 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "../styles";
 
 function Flight() {
   const [lala, setLala] = useState(null);
@@ -8,42 +9,39 @@ function Flight() {
   const [ticketClass, setTicketClass] = useState("economy");
 
   const apiTesting = () => {
-    const API_KEY = "8R0EBEAR0948TTJ9WAFJ8S6MKHTE"; 
+    const API_KEY = "8R0EBEAR0948TTJ9WAFJ8S6MKHTE";
 
     const requestData = {
-      
       legs: [
         {
           from: fromInput,
           to: toInput,
           passengers: passengerCount,
           class: ticketClass,
-        }
-        
+        },
       ],
-
     };
 
     console.log(requestData);
 
     fetch("https://beta4.api.climatiq.io/travel/flights", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${API_KEY}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(requestData),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      setLala(data); // Update the state with the response data
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(requestData),
     })
-    .catch((error) => {
-      console.error(error);
-      // Handle the error
-    });
-};
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setLala(data); // Update the state with the response data
+      })
+      .catch((error) => {
+        console.error(error);
+        // Handle the error
+      });
+  };
 
   const handleFromChange = (event) => {
     setFromInput(event.target.value);
@@ -67,39 +65,68 @@ function Flight() {
 
   return (
     <>
-      <div className="App">
-        <h1>Flight Emission:</h1>
+      <div className="flex flex-col">
+        <div className="calculator-bg3">
+          <div className="p-6">
+            <h1 className={`${styles.texts1} p-2 `}>From</h1>
+            <input
+              className="input-field p-6"
+              type="text"
+              value={fromInput}
+              onChange={handleFromChange}
+            />
+          </div>
 
-        <h3>From:</h3>
-        <input type="text" value={fromInput} onChange={handleFromChange} />
+          <div className="p-6">
+            <h1 className={`${styles.texts1} p-2 `}>From</h1>
+            <input
+              className="input-field p-6"
+              type="text"
+              value={toInput}
+              onChange={handleToChange}
+            />
+          </div>
 
-        <h3>To:</h3>
-        <input type="text" value={toInput} onChange={handleToChange} />
+          <div className="p-6">
+            <h1 className={`${styles.texts1} p-2 `}>No. of Passengers</h1>
+            <input
+              className="input-field p-6"
+              type="number"
+              value={passengerCount}
+              onChange={handlePassengerChange}
+            />
+          </div>
 
-        <h3>Passenger Count:</h3>
-        <input
-          type="number"
-          value={passengerCount}
-          onChange={handlePassengerChange}
-        />
+          <div className="p-6">
+            <h1 className={`${styles.texts1} p-2 `}>Ticket Class</h1>
+            <select
+              className="input-field p-6"
+              value={ticketClass}
+              onChange={handleTicketClassChange}>
+              <option value="economy">Economy</option>
+              <option value="business">Business</option>
+              <option value="firstclass">First Class</option>
+            </select>
+          </div>
 
-        <h3>Ticket Class:</h3>
-        <select value={ticketClass} onChange={handleTicketClassChange}>
-          <option value="economy">Economy</option>
-          <option value="business">Business</option>
-          <option value="firstclass">First Class</option>
-        </select>
+          <div className="p-6 mt-5">
+            <button className="calculate" onClick={handleCalculateClick}>
+              <h3 className={`${styles.texts2} p-2 `}>Calculate</h3>
+            </button>
+          </div>
+        </div>
 
-        <button onClick={handleCalculateClick}>Calculate</button>
-        {lala && (
-          <>
-            <h2>CO2 Emission:</h2>
-            <p>{lala.co2e}</p>
-          </>
-        )}
+        <div className="output mt-10">
+          <div className="output-field ">
+            <h2 className={`${styles.texts1} p-6`}>
+              Your Carbon offset is
+              {lala && <p>{lala.co2e}</p>}
+            </h2>
+          </div>
+        </div>
       </div>
     </>
   );
 }
 
-export default Flight
+export default Flight;
