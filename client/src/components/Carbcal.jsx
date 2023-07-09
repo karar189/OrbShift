@@ -4,6 +4,7 @@ import vehibtn from "../assets/Vehibtn.svg";
 import flightbtn from "../assets/flightbtn.svg";
 import Elec from "../components/Electricity";
 import Cars from "../components/Cars";
+import Flight from "../components/Flight";
 
 function Carbcal () {
   const [activeTab, setActiveTab] = useState(null);
@@ -31,7 +32,7 @@ function Carbcal () {
   const Component3 = () => {
     return (
       <div className="flex justify-center">
-        <h1>Component 3</h1>
+        <Flight/>
       </div>
     );
   };

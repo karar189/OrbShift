@@ -7,7 +7,7 @@ const Cars = () => {
   const [distanceInput, setDistanceInput] = useState("");
 
   const apiTesting = () => {
-    const API_KEY = "8R0EBEAR0948TTJ9WAFJ8S6MKHTE"; // Replace with your actual API key
+    const API_KEY = "8R0EBEAR0948TTJ9WAFJ8S6MKHTE"; 
 
     fetch("https://beta4.api.climatiq.io/estimate", {
       method: "POST",
@@ -57,7 +57,7 @@ const Cars = () => {
 
         <div className="calculator-bg2">
           <div className="p-6">
-            <h1 className={`${styles.texts1} p-2 `}>Weight of Cargo</h1>
+            <h1 className={`${styles.texts2} p-2 `}>Weight of Cargo</h1>
             <input
               className="input-field p-6"
               type="number"
@@ -67,7 +67,7 @@ const Cars = () => {
           </div>
 
           <div className="p-6">
-            <h1 className={`${styles.texts1} p-2 `}>Distance Covered</h1>
+            <h1 className={`${styles.texts2} p-2 `}>Distance Covered</h1>
             <input
               className="input-field p-6"
               type="number"
@@ -82,15 +82,18 @@ const Cars = () => {
             </button>
           </div>
         </div>
+        
 
-        <div className="div mt-10">
-          <div className="output-field ">
-            <h2 className={`${styles.texts1} p-6`}>
-              Your Carbon offset is :
+        <div className="output mt-10">
+          <div className="output-field">
+            <h2 className={`${styles.texts2} p-6`}>
+              Your Carbon offset is
               {lala && <p>{lala.co2e}</p>}
             </h2>
           </div>
         </div>
+
+
       </div>
     </>
   );

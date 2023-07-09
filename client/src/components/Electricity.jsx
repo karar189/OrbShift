@@ -48,11 +48,10 @@ const Electricity = () => {
   return (
     <div className="section">
       
-
       <div className="calculator-bg">
 
         <div className="p-6">
-          <h1 className={`${styles.texts1} p-2 `}>Amount Of Energy Consumed</h1>
+          <h1 className={`${styles.texts2} p-2 `}>Amount Of Energy Consumed</h1>
           <input
             className="input-field p-6"
             type="number"
@@ -72,7 +71,7 @@ const Electricity = () => {
       <div className="div mt-10">
         
         <div className="output-field ">
-        <h2 className={`${styles.texts1} p-6`}>
+        <h2 className={`${styles.texts2} p-6`}>
         Your Carbon offset is :
         {showOutput && <>{lala && <p>{lala.co2e}</p>}</>}
         </h2>
