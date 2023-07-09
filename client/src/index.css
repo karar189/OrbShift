@@ -87,3 +87,12 @@ body {
 .nanum {
   font-family: "Nanum Myeongjo";
 }
+
+.crowdcard {
+  border-radius: 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(237, 237, 237, 0.2) 0%,
+    rgba(237, 237, 237, 0.08) 100%
+  );
+}
