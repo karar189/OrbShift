@@ -1,7 +1,6 @@
 import React from "react";
 import Nav from "../components/Navbar";
 import earth from "../assets/earthbg.png";
-import earthmoji from "../assets/earthmoji.svg";
 
 const Hero = () => {
   return (
@@ -17,7 +16,6 @@ const Hero = () => {
           <div className="hero-txt flex justify-center text-8xl font-thin text-center Z-30 relative nanum pt-16">
             The coolest way to cool 
             the <br /> planet
-            {/* <img src={earthmoji} alt="" className="" /> */}
           </div>
 
           <div className="sub-hero relative ">

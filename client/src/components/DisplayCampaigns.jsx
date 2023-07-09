@@ -17,7 +17,7 @@ const DisplayCampaigns = ({ title, isLoading, campaigns }) => {
         {title} ({campaigns.length})
       </h1>
 
-      <div className="">
+      <div className="flex mx-14">
         {isLoading && <img src={loader} alt="loader" className="" />}
 
         {!isLoading && campaigns.length === 0 && (
@@ -27,7 +27,7 @@ const DisplayCampaigns = ({ title, isLoading, campaigns }) => {
         {!isLoading &&
           campaigns.length > 0 &&
           campaigns.map((campaign) => (
-            <FundCard
+            <FundCard className="flex"
               key={uuidv4()}
               {...campaign}
               handleClick={() => handleNavigate(campaign)}
