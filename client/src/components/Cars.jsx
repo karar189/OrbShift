@@ -65,7 +65,7 @@ const Cars = () => {
               value={weightInput}
               onChange={handleWeightChange}
             />
-            <h2 className="absolute right-2 p-4 mr-8 font-semibold mr-2">Km</h2>
+            <h2 className="absolute right-2 p-4 mr-8 font-semibold mr-8">Km</h2>
             </div>
             
           </div>
@@ -79,7 +79,7 @@ const Cars = () => {
               value={distanceInput}
               onChange={handleDistanceChange}
             />
-            <h2 className="absolute right-2 p-4 mr-8 font-semibold  mr-2">Kg</h2>
+            <h2 className="absolute right-2 p-4 mr-8 font-semibold  mr-8">Kg</h2>
             </div>
             
           </div>
