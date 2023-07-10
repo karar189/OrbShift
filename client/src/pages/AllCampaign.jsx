@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { DisplayCampaigns } from "../components";
 import { useStateContext } from "../context";
-import Navbar2 from "../components/Navbar2";
+
 import sea from "../assets/sea.png";
 
 const Home = () => {
@@ -26,13 +26,11 @@ const Home = () => {
     <>
       <div className="hero ">
         <div className="flex justify-center">
-          <img src={sea} alt="" className="-z-10 absolute" />
-
-          <Navbar2></Navbar2>
+          <img src={sea} alt="" className="-z-10 absolute top-0" />
         </div>
 
         <h1 className="text-white flex justify-center text-8xl font-thin text-center Z-30 relative nanum mt-16">
-          Projects create an impact
+          Projects that create an impact
         </h1>
       </div>
 
