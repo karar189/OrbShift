@@ -7,7 +7,7 @@ const Electricity = () => {
   const [showOutput, setShowOutput] = useState(false);
 
   const apiTesting = () => {
-    const API_KEY = "8R0EBEAR0948TTJ9WAFJ8S6MKHTE"; // Replace with your actual API key
+    const API_KEY = "8R0EBEAR0948TTJ9WAFJ8S6MKHTE"; 
 
     fetch("https://beta4.api.climatiq.io/estimate", {
       method: "POST",
@@ -20,7 +20,7 @@ const Electricity = () => {
           data_version: "^1",
         },
         parameters: {
-          energy: Number(energyInput), // Convert energyInput to a number
+          energy: Number(energyInput), 
           energy_unit: "kWh",
         },
       }),
@@ -28,21 +28,20 @@ const Electricity = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        setLala(data); // Update the state with the response data
+        setLala(data); 
       })
       .catch((error) => {
         console.error(error);
-        // Handle the error
       });
   };
 
   const handleEnergyChange = (event) => {
-    setEnergyInput(event.target.value); // Update the energyInput state with the user input
+    setEnergyInput(event.target.value);
   };
 
   const handleCalculateClick = () => {
     apiTesting();
-    setShowOutput(true); // Show the output after clicking Calculate
+    setShowOutput(true); 
   };
 
   return (
@@ -51,13 +50,18 @@ const Electricity = () => {
       <div className="calculator-bg">
 
         <div className="p-6">
-          <h1 className={`${styles.texts2} p-2 `}>Amount Of Energy Consumed</h1>
+          <h1 className={`${styles.texts2} p-2 `}>Amount Of Energy Consumed(in 1month)</h1>
+          <div className="flex relative">
           <input
             className="input-field p-6"
             type="number"
             value={energyInput}
             onChange={handleEnergyChange}
           />
+          <h2 className="absolute right-2 p-4 mr-8 font-semibold">KWh</h2>
+          </div>
+          
+         
         </div>
 
         <div className="p-6">
@@ -68,13 +72,14 @@ const Electricity = () => {
 
       </div>
       
-      <div className="div mt-10">
+      <div className="output mt-10">
         
-        <div className="output-field ">
-        <h2 className={`${styles.texts2} p-6`}>
+        <div className="output-field flex relative ">
+        <h2 className={`${styles.texts2} text-lg p-4`}>
         Your Carbon offset is :
-        {showOutput && <>{lala && <p>{lala.co2e}</p>}</>}
+        <p className="text-2xl">{showOutput && <>{lala && <p>{lala.co2e}</p>}</>}</p>
         </h2>
+        <h3 className="absolute right-2 pt-10 mr-8 text-white text-2xl font-semibold">Kg</h3>
         </div>
       </div>
 
