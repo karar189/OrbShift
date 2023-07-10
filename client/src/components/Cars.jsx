@@ -31,20 +31,20 @@ const Cars = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        setLala(data); // Update the state with the response data
+        setLala(data); 
       })
       .catch((error) => {
         console.error(error);
-        // Handle the error
+        
       });
   };
 
   const handleWeightChange = (event) => {
-    setWeightInput(event.target.value); // Update the weightInput state with the user input
+    setWeightInput(event.target.value); 
   };
 
   const handleDistanceChange = (event) => {
-    setDistanceInput(event.target.value); // Update the distanceInput state with the user input
+    setDistanceInput(event.target.value); 
   };
 
   const handleCalculateClick = () => {

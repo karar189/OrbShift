@@ -7,7 +7,7 @@ const Electricity = () => {
   const [showOutput, setShowOutput] = useState(false);
 
   const apiTesting = () => {
-    const API_KEY = "8R0EBEAR0948TTJ9WAFJ8S6MKHTE"; // Replace with your actual API key
+    const API_KEY = "8R0EBEAR0948TTJ9WAFJ8S6MKHTE"; 
 
     fetch("https://beta4.api.climatiq.io/estimate", {
       method: "POST",
@@ -20,7 +20,7 @@ const Electricity = () => {
           data_version: "^1",
         },
         parameters: {
-          energy: Number(energyInput), // Convert energyInput to a number
+          energy: Number(energyInput), 
           energy_unit: "kWh",
         },
       }),
@@ -28,21 +28,20 @@ const Electricity = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        setLala(data); // Update the state with the response data
+        setLala(data); 
       })
       .catch((error) => {
         console.error(error);
-        // Handle the error
       });
   };
 
   const handleEnergyChange = (event) => {
-    setEnergyInput(event.target.value); // Update the energyInput state with the user input
+    setEnergyInput(event.target.value);
   };
 
   const handleCalculateClick = () => {
     apiTesting();
-    setShowOutput(true); // Show the output after clicking Calculate
+    setShowOutput(true); 
   };
 
   return (

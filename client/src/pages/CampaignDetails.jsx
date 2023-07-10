@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { ethers } from "ethers";
-
+import backers from "../assets/backers.svg";
+import calendar from "../assets/calendar.svg";
+import bag from "../assets/bag.svg";
 import { useStateContext } from "../context";
 import { CountBox, CustomButton, Loader } from "../components";
 import { calculateBarPercentage, daysLeft } from "../utils";
 import { thirdweb } from "../assets";
+
+
+
 
 const CampaignDetails = () => {
   const { state } = useLocation();
@@ -57,18 +62,29 @@ const CampaignDetails = () => {
                   state.amountCollected
                 )}%`,
                 maxWidth: "100%",
-              }}
-            ></div>
+              }}></div>
           </div>
         </div>
 
         <div className="flex md:w-[150px] w-full flex-wrap justify-between gap-[30px]">
-          <CountBox title="Days Left" value={remainingDays} />
+          <div>
+            <img src={calendar} alt="" className="" />
+            <CountBox  title="Total Backers" value={donators.length} />
+          </div>
+          
+          <div className="">
+            <img src={bag} alt="" className="" />
           <CountBox
             title={`Raised of ${state.target}`}
             value={state.amountCollected}
           />
-          <CountBox title="Total Backers" value={donators.length} />
+
+          </div>
+         
+          <div className="">
+            <img src={backers} alt="" className="" />
+            <CountBox title="Days Left" value={remainingDays} />
+          </div>
         </div>
       </div>
 
@@ -117,8 +133,7 @@ const CampaignDetails = () => {
                 donators.map((item, index) => (
                   <div
                     key={`${item.donator}-${index}`}
-                    className="flex justify-between items-center gap-4"
-                  >
+                    className="flex justify-between items-center gap-4">
                     <p className="font-epilogue font-normal text-[16px] leading-[26px] break-ll">
                       {index + 1}. {item.donator}
                     </p>
