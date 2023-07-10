@@ -117,11 +117,14 @@ function Flight() {
         </div>
 
         <div className="output mt-10">
-          <div className="output-field ">
-            <h2 className={`${styles.texts2} p-6`}>
-              Your Carbon offset is
-              {lala && <p>{lala.co2e}</p>}
+        <div className="output-field flex relative ">
+            <h2 className={`${styles.texts2} text-lg p-6`}>
+              Your Carbon offset is:
+              <p className="text-2xl">{lala && <p>{lala.co2e}</p>}</p>
             </h2>
+
+            <h3 className="absolute right-2 pt-10 mr-8 text-white text-2xl font-semibold">Kg</h3>
+        
           </div>
         </div>
       </div>
