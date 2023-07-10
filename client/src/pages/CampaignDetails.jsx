@@ -65,10 +65,13 @@ const CampaignDetails = () => {
           </div>
 
           <div className="flex md:w-[150px] w-full flex-wrap justify-between gap-[30px] ml-8">
-            <div>
-              <img src={calendar} alt="" className="" />
-              <CountBox title="Total Backers" value={donators.length} />
+
+          <div className="">
+              <img src={backers} alt="" className="" />
+              <CountBox title="Days Left" value={remainingDays} />
             </div>
+
+            
 
             <div className="">
               <img src={bag} alt="" className="" />
@@ -78,10 +81,12 @@ const CampaignDetails = () => {
               />
             </div>
 
-            <div className="">
-              <img src={backers} alt="" className="" />
-              <CountBox title="Days Left" value={remainingDays} />
+            <div>
+              <img src={calendar} alt="" className="" />
+              <CountBox title="Total Backers" value={donators.length} />
             </div>
+
+            
           </div>
         </div>
 
