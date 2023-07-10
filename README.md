@@ -1,4 +1,5 @@
-<img width="2640" alt="Readme-orbshift (1)" src="https://github.com/karar189/OrbShift/assets/52580094/315afe55-c4cb-4881-9905-dc71335b060d">![Slide 1](https://github.com/karar189/OrbShift/assets/52580094/5d8e6c7d-2843-49bf-a49c-3812b4b68205)
+![Slide 1](https://github.com/karar189/OrbShift/assets/52580094/e13bbbb8-4d5b-4ab3-9c17-51b790969c73)
+
 
 # OrbShift
 
