@@ -1,4 +1,4 @@
-![Slide 1](https://github.com/karar189/OrbShift/assets/52580094/5d8e6c7d-2843-49bf-a49c-3812b4b68205)
+<img width="2640" alt="Readme-orbshift (1)" src="https://github.com/karar189/OrbShift/assets/52580094/315afe55-c4cb-4881-9905-dc71335b060d">![Slide 1](https://github.com/karar189/OrbShift/assets/52580094/5d8e6c7d-2843-49bf-a49c-3812b4b68205)
 
 # OrbShift
 
@@ -46,6 +46,14 @@ There are two types of users for this application , users who want to contribute
 
 
 ## User Flow
+
+<img width="2640" alt="Readme-orbshift (1)" src="https://github.com/karar189/OrbShift/assets/52580094/0373f9c3-ad0b-4808-a4e2-76f0da830ff7">
+
+
+## Future Scope
+
+![Marketplace](https://github.com/karar189/OrbShift/assets/52580094/8b6e28e5-f8cc-4ef9-9dd9-62187295adbe)
+
 
 
 ## Acknowledgements
