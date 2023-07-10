@@ -8,6 +8,7 @@ import { useStateContext } from "../context";
 import { CountBox, CustomButton, Loader } from "../components";
 import { calculateBarPercentage, daysLeft } from "../utils";
 import { thirdweb } from "../assets";
+import user from "../assets/user.svg";
 
 const CampaignDetails = () => {
   const { state } = useLocation();
@@ -96,7 +97,7 @@ const CampaignDetails = () => {
               <div className="mt-[20px] flex flex-row items-center flex-wrap gap-[14px]">
                 <div className="w-[52px] h-[52px] flex items-center justify-center rounded-full  cursor-pointer">
                   <img
-                    src={thirdweb}
+                    src={user}
                     alt="user"
                     className="w-[60%] h-[60%] object-contain"
                   />
