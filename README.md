@@ -1,3 +1,4 @@
+![Slide 1](https://github.com/karar189/OrbShift/assets/52580094/5d8e6c7d-2843-49bf-a49c-3812b4b68205)
 
 # OrbShift
 
@@ -11,21 +12,16 @@ This repository contains a web application built with React.js and Solidity that
 - Swapnaneel Chakraborti [https://github.com/Swapnaneel029]
 
 
-## Demo
 
-For Client :
+## Installation
 
-cd Client
+Install with npm
 
-npm i
-
-npm run dev
-
-For Web 3: 
-(Its alread deployed)
-
-
-
+```bash
+ cd client
+ npm install --force
+ npm run dev
+```
 
 ## Features
 
@@ -49,6 +45,7 @@ There are two types of users for this application , users who want to contribute
 **Wallet** Metamask
 
 
+## User Flow
 
 
 ## Acknowledgements
