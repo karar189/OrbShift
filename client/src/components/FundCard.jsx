@@ -56,7 +56,7 @@ const FundCard = ({
         </div>
       </div> */}
 
-      <div className="card w-96 crowdcard rounded-md">
+      <div className="card w-96 crowdcard rounded-md " onClick={handleClick}>
         <figure>
         <img src={image} alt="fund" className="w-96 h-60 rounded-md " />
         </figure>
