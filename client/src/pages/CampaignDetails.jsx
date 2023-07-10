@@ -88,7 +88,8 @@ const CampaignDetails = () => {
         </div>
       </div>
 
-      <div className="mt-[60px] flex lg:flex-row flex-col gap-5">
+      <div className="mt-[60px] flex lg:flex-row flex-col gap-5 ">
+        
         <div className="flex-[2] flex flex-col gap-[40px]">
           <div>
             <h4 className="text-white text-[40px] font-semibold leading-[68px]">
@@ -175,15 +176,16 @@ const CampaignDetails = () => {
 
               <div className="my-[20px] p-4 rounded-[10px]">
                 <h4 className="font-epilogue font-semibold text-[14px] leading-[22px] ">
-                  Back it because you believe in it.
+                Your contributions will generate direct impact for the planet
                 </h4>
                 <p className="mt-[20px] font-epilogue font-normal leading-[22px] text-[#808191]">
-                  Support the project for no reward, just because it speaks to
-                  you.
+                  We promise that your investments will directly  go to <br/> organizations  who tirelesly strive 
+                  for a carbon neutral earth.
                 </p>
               </div>
 
               <CustomButton
+                
                 btnType="button"
                 title="Fund Campaign"
                 styles="w-full bg-[#8c6dfd]"
