@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Nanum+Myeongjo&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Nanum+Myeongjo&display=swap");
 
 body {
   background-color: #10172c;

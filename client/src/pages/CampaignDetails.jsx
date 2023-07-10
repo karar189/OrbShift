@@ -60,18 +60,16 @@ const CampaignDetails = () => {
                     state.amountCollected
                   )}%`,
                   maxWidth: "100%",
-                }}></div>
+                }}
+              ></div>
             </div>
           </div>
 
           <div className="flex md:w-[150px] w-full flex-wrap justify-between gap-[30px] ml-8">
-
-          <div className="">
+            <div className="">
               <img src={backers} alt="" className="" />
               <CountBox title="Days Left" value={remainingDays} />
             </div>
-
-            
 
             <div className="">
               <img src={bag} alt="" className="" />
@@ -85,8 +83,6 @@ const CampaignDetails = () => {
               <img src={calendar} alt="" className="" />
               <CountBox title="Total Backers" value={donators.length} />
             </div>
-
-            
           </div>
         </div>
 
@@ -135,7 +131,8 @@ const CampaignDetails = () => {
                   donators.map((item, index) => (
                     <div
                       key={`${item.donator}-${index}`}
-                      className="flex justify-between items-center gap-4">
+                      className="flex justify-between items-center gap-4"
+                    >
                       <p className="font-epilogue font-normal text-[16px] leading-[26px] break-ll">
                         {index + 1}. {item.donator}
                       </p>
@@ -164,7 +161,7 @@ const CampaignDetails = () => {
                   Fund the Campaign
                 </p>
                 <div className="mt-[30px]">
-                  <input
+                  {/* <input
                     type="number"
                     placeholder="ETH 0.1"
                     step="0.01"
@@ -190,7 +187,34 @@ const CampaignDetails = () => {
                     title="Invest"
                     styles="w-full bg-[#8c6dfd]"
                     handleClick={handleDonate}
-                  />
+                  /> */}
+                  <div className="mt-[30px]">
+                    <input
+                      type="number"
+                      placeholder="ETH 0.1"
+                      step="0.01"
+                      className="w-full py-[10px] sm:px-[20px] px-[15px] outline-none border-[1px] border-[#b6b6c2] bg-transparent font-epilogue text-white text-[18px] leading-[30px] placeholder:text-[#4b5264] rounded-[10px]"
+                      value={amount}
+                      onChange={(e) => setAmount(e.target.value)}
+                    />
+
+                    <div className="my-[20px] p-4 bg-[#13131a] rounded-[10px]">
+                      <h4 className="font-epilogue font-semibold text-[14px] leading-[22px] text-white">
+                        Back it because you believe in it.
+                      </h4>
+                      <p className="mt-[20px] font-epilogue font-normal leading-[22px] text-[#808191]">
+                        Support the project for no reward, just because it
+                        speaks to you.
+                      </p>
+                    </div>
+
+                    <CustomButton
+                      btnType="button"
+                      title="Fund Campaign"
+                      styles="w-full bg-[#8c6dfd]"
+                      handleClick={handleDonate}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
