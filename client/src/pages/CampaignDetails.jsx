@@ -150,14 +150,17 @@ const CampaignDetails = () => {
             </div>
           </div>
         </div>
-
-        <div className="flex-1 crowdcard px-8 pb-8">
-          <h4 className="text-white text-[40px] font-semibold leading-[68px]">
+        
+        <div className="">
+        <h4 className="text-white text-[40px] font-semibold leading-[68px]">
             Fund
           </h4>
 
+        <div className="flex-1 crowdcard px-8 pb-8">
+          
+
           <div className="mt-[20px] flex flex-col   rounded-[10px]">
-            <p className="text-center text-gray-200 text-2xl font-semibold leading-[40.80px] ">
+            <p className="text-center text-gray-200 text-2xl font-semibold leading-[40.80px] mt-8 ">
               Fund the Campaign
             </p>
             <div className="mt-[30px]">
@@ -195,6 +198,8 @@ const CampaignDetails = () => {
             </div>
           </div>
         </div>
+        </div>
+        
       </div>
     </div>
   );
