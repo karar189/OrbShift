@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import orb from "../assets/orb.svg";
 
 import { useStateContext } from "../context";
 
@@ -13,7 +14,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <a href="/" className="">
             <h1 className="ml-24 text-white text-lg font-semibold leading-[30.60px]">
-              Product Name
+             <img src={orb} alt="" className="" />
             </h1>
           </a>
         </div>

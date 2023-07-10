@@ -68,7 +68,7 @@ function Flight() {
       <div className="flex flex-col">
         <div className="calculator-bg3">
           <div className="p-6">
-            <h1 className={`${styles.texts2} p-2 `}>From</h1>
+            <h1 className={`${styles.texts2} p-2 flex `}>From select your <span><a href="https://www.iata.org/en/publications/directories/code-search/" className="text-md text-blue-300"> IETA </a></span> code </h1>
             <input
               className="input-field p-6"
               type="text"
@@ -78,7 +78,7 @@ function Flight() {
           </div>
 
           <div className="p-6">
-            <h1 className={`${styles.texts2} p-2 `}>To</h1>
+          <h1 className={`${styles.texts2} p-2 flex `}>To select your <span><a href="https://www.iata.org/en/publications/directories/code-search/" className="text-md text-blue-300"> IETA </a></span> code </h1>
             <input
               className="input-field p-6"
               type="text"
