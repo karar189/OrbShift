@@ -35,11 +35,11 @@ function Flight() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        setLala(data); // Update the state with the response data
+        setLala(data); 
       })
       .catch((error) => {
         console.error(error);
-        // Handle the error
+        
       });
   };
 
@@ -68,7 +68,7 @@ function Flight() {
       <div className="flex flex-col">
         <div className="calculator-bg3">
           <div className="p-6">
-            <h1 className={`${styles.texts1} p-2 `}>From</h1>
+            <h1 className={`${styles.texts2} p-2 flex `}>From select your <span><a href="https://www.iata.org/en/publications/directories/code-search/" className="text-md text-blue-300"> IETA </a></span> code </h1>
             <input
               className="input-field p-6"
               type="text"
@@ -78,7 +78,7 @@ function Flight() {
           </div>
 
           <div className="p-6">
-            <h1 className={`${styles.texts1} p-2 `}>From</h1>
+          <h1 className={`${styles.texts2} p-2 flex `}>To select your <span><a href="https://www.iata.org/en/publications/directories/code-search/" className="text-md text-blue-300"> IETA </a></span> code </h1>
             <input
               className="input-field p-6"
               type="text"
@@ -88,7 +88,7 @@ function Flight() {
           </div>
 
           <div className="p-6">
-            <h1 className={`${styles.texts1} p-2 `}>No. of Passengers</h1>
+            <h1 className={`${styles.texts2} p-2 `}>No. of Passengers</h1>
             <input
               className="input-field p-6"
               type="number"
@@ -98,7 +98,7 @@ function Flight() {
           </div>
 
           <div className="p-6">
-            <h1 className={`${styles.texts1} p-2 `}>Ticket Class</h1>
+            <h1 className={`${styles.texts2} p-2 `}>Ticket Class</h1>
             <select
               className="input-field p-6"
               value={ticketClass}
@@ -117,11 +117,14 @@ function Flight() {
         </div>
 
         <div className="output mt-10">
-          <div className="output-field ">
-            <h2 className={`${styles.texts1} p-6`}>
-              Your Carbon offset is
-              {lala && <p>{lala.co2e}</p>}
+        <div className="output-field flex relative ">
+            <h2 className={`${styles.texts2} text-lg p-6`}>
+              Your Carbon offset is:
+              <p className="text-2xl">{lala && <p>{lala.co2e}</p>}</p>
             </h2>
+
+            <h3 className="absolute right-2 pt-10 mr-8 text-white text-2xl font-semibold">Kg</h3>
+        
           </div>
         </div>
       </div>
