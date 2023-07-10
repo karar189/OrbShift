@@ -49,8 +49,16 @@ function Home() {
           ))}
         </div> */}
 
-        <div >
-          <img src={subhero} alt="" className="w-screen" />
+        <div  className="relative">
+          <img src={subhero} alt="" className="w-screen -z-10 " />
+          <div className="flex justify-center">
+          <button className="button absolute bottom-28 px-8 py-2">
+            <a href="/all" className="text-white">
+              View Projects
+            </a>
+          </button>
+        </div>
+          
         </div>
 
         <footer className="footer footer-center bg-slate-800 bg-base-300 text-base-content py-2">

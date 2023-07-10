@@ -78,7 +78,6 @@ const Electricity = () => {
         <h2 className={`${styles.texts2} text-lg p-4`}>
         Your Carbon offset is :
         <p className="text-2xl">{showOutput && <>{lala && <p>{lala.co2e}</p>}</>}</p>
-        
         </h2>
         <h3 className="absolute right-2 pt-10 mr-8 text-white text-2xl font-semibold">Kg</h3>
         </div>

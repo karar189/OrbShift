@@ -32,7 +32,6 @@ function Carbcal() {
   };
 
   const [activeTab, setActiveTab] = useState(() => Component1);
-
   const handleClick = (component) => {
     setActiveTab(() => component);
   };
