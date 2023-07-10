@@ -38,7 +38,7 @@ const CampaignDetails = () => {
   };
 
   return (
-    <div>
+    <div className="px-24 mt-24 mb-32 text-white">
       {isLoading && <Loader />}
 
       <div className="w-full flex md:flex-row flex-col mt-10 gap-[30px]">
@@ -75,7 +75,7 @@ const CampaignDetails = () => {
       <div className="mt-[60px] flex lg:flex-row flex-col gap-5">
         <div className="flex-[2] flex flex-col gap-[40px]">
           <div>
-            <h4 className="font-epilogue font-semibold text-[18px] uppercase">
+            <h4 className="text-white text-[40px] font-semibold leading-[68px]">
               Creator
             </h4>
 
@@ -88,32 +88,31 @@ const CampaignDetails = () => {
                 />
               </div>
               <div>
-                <h4 className="font-epilogue font-semibold text-[14px]  break-all">
+                <h4 className="text-gray-200 text-lg font-semibold leading-snug">
                   {state.owner}
                 </h4>
-                <p className="mt-[4px] font-epilogue font-normal text-[12px] ">
-                  10 Campaigns
-                </p>
               </div>
             </div>
           </div>
 
           <div>
-            <h4 className="font-epilogue font-semibold text-[18px] ">Story</h4>
+            <h4 className="text-white text-[32px] font-semibold leading-[54.40px] ">
+              Project objective
+            </h4>
 
             <div className="mt-[20px]">
-              <p className="font-epilogue font-normal text-[16px]  leading-[26px] text-justify">
+              <p className="pr-24 text-gray-200 text-lg font-semibold leading-[27px] text-justify">
                 {state.description}
               </p>
             </div>
           </div>
 
           <div>
-            <h4 className="font-epilogue font-semibold text-[18px]  uppercase">
+            <h4 className="text-white text-[32px] font-semibold leading-[54.40px]">
               Donators
             </h4>
 
-            <div className="mt-[20px] flex flex-col gap-4">
+            <div className="text-gray-200 text-lg font-semibold leading-[27px] gap-4">
               {donators.length > 0 ? (
                 donators.map((item, index) => (
                   <div
@@ -123,7 +122,7 @@ const CampaignDetails = () => {
                     <p className="font-epilogue font-normal text-[16px] leading-[26px] break-ll">
                       {index + 1}. {item.donator}
                     </p>
-                    <p className="font-epilogue font-normal text-[16px]  leading-[26px] break-ll">
+                    <p className="font-epilogue pr-20 font-normal text-[16px]  leading-[26px] break-ll">
                       {item.donation}
                     </p>
                   </div>
@@ -137,14 +136,14 @@ const CampaignDetails = () => {
           </div>
         </div>
 
-        <div className="flex-1">
-          <h4 className="font-epilogue font-semibold text-[18px]  uppercase">
+        <div className="flex-1 crowdcard px-8 pb-8">
+          <h4 className="text-white text-[40px] font-semibold leading-[68px]">
             Fund
           </h4>
 
-          <div className="mt-[20px] flex flex-col p-4  rounded-[10px]">
-            <p className="font-epilogue fount-medium text-[20px] leading-[30px] text-center ">
-              Fund the campaign
+          <div className="mt-[20px] flex flex-col   rounded-[10px]">
+            <p className="text-center text-gray-200 text-2xl font-semibold leading-[40.80px] ">
+              Fund the Campaign
             </p>
             <div className="mt-[30px]">
               <input
@@ -172,6 +171,12 @@ const CampaignDetails = () => {
                 styles="w-full bg-[#8c6dfd]"
                 handleClick={handleDonate}
               />
+
+              {/* <div className="w-[541px] h-[60px] p-2 bg-blue-700 rounded-xl justify-center items-center gap-2 inline-flex cursor-pointer">
+                <div className="text-center text-white text-xl font-semibold leading-[34px]">
+                  Invest
+                </div>
+              </div> */}
             </div>
           </div>
         </div>
