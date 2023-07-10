@@ -35,11 +35,11 @@ function Flight() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        setLala(data); // Update the state with the response data
+        setLala(data); 
       })
       .catch((error) => {
         console.error(error);
-        // Handle the error
+        
       });
   };
 
@@ -68,7 +68,7 @@ function Flight() {
       <div className="flex flex-col">
         <div className="calculator-bg3">
           <div className="p-6">
-            <h1 className={`${styles.texts1} p-2 `}>From</h1>
+            <h1 className={`${styles.texts2} p-2 `}>From</h1>
             <input
               className="input-field p-6"
               type="text"
@@ -78,7 +78,7 @@ function Flight() {
           </div>
 
           <div className="p-6">
-            <h1 className={`${styles.texts1} p-2 `}>From</h1>
+            <h1 className={`${styles.texts2} p-2 `}>To</h1>
             <input
               className="input-field p-6"
               type="text"
@@ -88,7 +88,7 @@ function Flight() {
           </div>
 
           <div className="p-6">
-            <h1 className={`${styles.texts1} p-2 `}>No. of Passengers</h1>
+            <h1 className={`${styles.texts2} p-2 `}>No. of Passengers</h1>
             <input
               className="input-field p-6"
               type="number"
@@ -98,7 +98,7 @@ function Flight() {
           </div>
 
           <div className="p-6">
-            <h1 className={`${styles.texts1} p-2 `}>Ticket Class</h1>
+            <h1 className={`${styles.texts2} p-2 `}>Ticket Class</h1>
             <select
               className="input-field p-6"
               value={ticketClass}
@@ -118,7 +118,7 @@ function Flight() {
 
         <div className="output mt-10">
           <div className="output-field ">
-            <h2 className={`${styles.texts1} p-6`}>
+            <h2 className={`${styles.texts2} p-6`}>
               Your Carbon offset is
               {lala && <p>{lala.co2e}</p>}
             </h2>

@@ -41,6 +41,12 @@ const Home = () => {
           campaigns={campaigns}
         />
       </div>
+
+      <footer className="footer footer-center bg-slate-800 bg-base-300 text-base-content py-2">
+          <div className="flex justify-center text-slate-300">
+            <p>Copyright © 2023 - Made for Hack4Bengal by HiveeZ</p>
+          </div>
+        </footer>
     </>
   );
 };
